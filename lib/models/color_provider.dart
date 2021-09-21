@@ -15,13 +15,10 @@ class ColorCreator extends ChangeNotifier {
     var randomizer = Random();
     _color = Color.fromRGBO(randomizer.nextInt(255), randomizer.nextInt(255),
         randomizer.nextInt(255), 1);
-    print("create color");
-    print(_color);
     notifyListeners();
   }
 
   void rewriteColor() {
     _colorPrev = _color;
-    print("rewrite color");
   }
 }

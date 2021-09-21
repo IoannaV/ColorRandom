@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'models/color_provider.dart';
-import 'background_random.dart';
+import 'home_page.dart';
 
+//TODO: call color random before widget
 void main() {
   runApp(ChangeNotifierProvider<ColorCreator>(
       create: (context) => ColorCreator(), child: const MyApp()));
@@ -13,6 +14,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: BackgroundRandomWidget());
+    return const MaterialApp(home: HomePage());
   }
 }
